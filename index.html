@@ -2,6 +2,15 @@
 <html>
 
 <head>
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NS33MD7E0W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NS33MD7E0W');
+</script>
 	<title>Bakery - Bootstrap 5 HTML Cake Shop Template</title>
 	<meta name="google-site-verification" content="Wi_ykO4Zsy9c4yXyo2_ThLCHLDcGtF-6rUL4pwW-hk0" />
 	<meta charset="utf-8">
@@ -59,6 +68,41 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			</div>
 		</div>
 	</div><!----top-menu---->
+	<div>This is where the purchase form would go</div>
+    <button>Submit</button>
+    <script>
+    gtag("event", "purchase", {
+        transaction_id: "T_12345_1",
+        value: 25.42,
+        tax: 4.90,
+        shipping: 5.99,
+        currency: "USD",
+        coupon: "SUMMER_SALE",
+        items: [
+        // If someone purchases more than one item, 
+        // you can add those items to the items array
+         {
+          item_id: "SKU_12345",
+          item_name: "Stan and Friends Tee",
+          affiliation: "Google Merchandise Store",
+          coupon: "SUMMER_FUN",
+          discount: 2.22,
+          index: 0,
+          item_brand: "Google",
+          item_category: "Apparel",
+          item_category2: "Adult",
+          item_category3: "Shirts",
+          item_category4: "Crew",
+          item_category5: "Short sleeve",
+          item_list_id: "related_products",
+          item_list_name: "Related Products",
+          item_variant: "green",
+          location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
+          price: 9.99,
+          quantity: 1
+        }]
+    });
+    </script>
 
 	<header id="header">
 		<div class="container-fluid">
@@ -150,7 +194,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 							<h2 class="colored padding-xsmall display-1 text-capitalize lh-1 py-2"><a href="">Buttercream cakes</a></h2>
 							<p>A gorgeous selection of our favorites for a client to send as a new year’s gift. A gorgeous
 								selection of our favorites for a client to send as a new year’s gift.</p>
-							<div class="pix_btn">
+							<div id='btn' class="pix_btn">
 								<a href="#" class="btn-hvr-effects mt-3">Shop Now</a>
 							</div>
 						</div>
